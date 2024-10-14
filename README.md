@@ -41,8 +41,6 @@ npm run dev
 
 ```
 
-> > > > > > > 95a1277 (Initial commit)
-
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
