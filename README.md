@@ -4,7 +4,7 @@ This is an example app that shows how to use [AWS Amplify Gen 2](https://docs.am
 
 This diagrams explains the services used.
 
-![game-bedrock-app](public/gen2.png)
+![game-store-catalog-creator](public/gen2.png)
 
 ## Getting Started
 
@@ -12,8 +12,8 @@ This diagrams explains the services used.
 
 ```
 
-git clone https://github.com/aws-samples/game-bedrock-app.git
-cd game-bedrock-app
+git clone https://github.com/build-on-aws/game-store-catalog-creator.git
+cd game-store-catalog-creator
 
 ```
 
