@@ -3,7 +3,7 @@ import { GamePromptProps } from "./types";
 export function GamePrompt({
   generateGameListing,
   loading,
-  generatedImgs,
+  generatedImages,
   setPrompt,
   prompt,
 }: GamePromptProps) {
@@ -35,11 +35,11 @@ export function GamePrompt({
           Generate Game
         </button>
       </form>
-      {generatedImgs.length > 0 ? (
+      {generatedImages.length > 0 ? (
         <section className="nes-container with-title flex flex-col gap-4 my-4">
           <h3 className="title">Pictures to choose from...</h3>
           <div className="grid grid-cols-4">
-            {generatedImgs.map((img, index) => {
+            {generatedImages.map((img, index) => {
               return (
                 <img
                   className="m-auto"

@@ -14,7 +14,7 @@ export function AddGame() {
   const [price, setPrice] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
   const [image, setImage] = React.useState("");
-  const [generatedImgs, setGeneratedImgs] = React.useState<string[]>([]);
+  const [generatedImages, setGeneratedImages] = React.useState<string[]>([]);
   const navigate = useNavigate();
 
   async function generateGameListing(event: FormEvent<HTMLFormElement>) {
@@ -56,7 +56,7 @@ export function AddGame() {
           return (result.value.data?.[0] as string) ?? "";
         } else return "";
       }, []);
-      setGeneratedImgs(images);
+      setGeneratedImages(images);
       setLoading(false);
     });
   }
@@ -64,14 +64,13 @@ export function AddGame() {
   async function createGame() {
     setLoading(true);
 
-    const { errors } = await client.models.Game.create({
+    await client.models.Game.create({
       name,
       description,
       rating,
       price,
       image,
     });
-    console.log("errors", errors);
 
     navigate("/");
     setLoading(false);
@@ -98,7 +97,7 @@ export function AddGame() {
         <GamePrompt
           generateGameListing={generateGameListing}
           loading={loading}
-          generatedImgs={generatedImgs}
+          generatedImages={generatedImages}
           prompt={prompt}
           setPrompt={setPrompt}
         />

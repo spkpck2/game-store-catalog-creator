@@ -16,7 +16,7 @@ export interface GameInformationProps {
 export interface GamePromptProps {
   generateGameListing: (e: React.FormEvent<HTMLFormElement>) => void;
   loading: boolean;
-  generatedImgs: string[];
+  generatedImages: string[];
   setPrompt: (prompt: string) => void;
   prompt: string;
 }

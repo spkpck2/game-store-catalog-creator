@@ -11,13 +11,13 @@ export function Hero() {
   const [games, setGames] = useState<Schema["Game"]["type"][]>([]);
 
   useEffect(() => {
-    async function grabGames() {
+    async function fetchGames() {
       const { data: allGames } = await client.models.Game.list();
       setGames(allGames);
     }
 
-    grabGames();
-  }, [client.models.Game]);
+    fetchGames();
+  }, []);
   return (
     <div>
       <div className="flex justify-between">
