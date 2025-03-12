@@ -1,7 +1,11 @@
 import {
   BedrockRuntimeClient,
-  InvokeAgentCommand,
+  InvokeModelCommand,
 } from "@aws-sdk/client-bedrock-runtime";
+import {
+ BedrockAgentRuntimeClient,
+ InvokeAgentCommand 
+} from "@aws-sdk/client-bedrock-agent-runtime";
 import type { Schema } from "../../data/resource";
 
 import { env } from "$amplify/env/generateGameListing";
@@ -9,7 +13,7 @@ import { env } from "$amplify/env/generateGameListing";
 export const handler: Schema["generateGameListing"]["functionHandler"] = async (
   event
 ) => {
-  const client = new BedrockRuntimeClient({ region: "us-west-2" });
+  const client = new BedrockAgentRuntimeClient({ region: "us-west-2" });
   const invokeAgent = async(agentId: string, agentAliasId: string, sessionId: string, inputText: string) => {
 	const command = new InvokeAgentCommand({
 	agentId: agentId,
