@@ -27,6 +27,7 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 			for await (const event of response.completion) {
 				if (event.chunk) {
 					 responseText =  new TextDecoder('utf-8').decode(event.chunk.bytes);
+					 console.log(responseText);
 				}
 			}
 		}
