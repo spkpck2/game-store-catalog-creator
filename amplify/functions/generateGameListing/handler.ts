@@ -28,8 +28,7 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 		if(response.completion) {
 			for await (const event of response.completion) {
 				if (event.chunk) {
-					const responseText = new TextDecoder('utf-8').decode(event.chunk.bytes);
-					console.log(responseText);
+					return  new TextDecoder('utf-8').decode(event.chunk.bytes);
 				}
 			}
 		} else {
@@ -45,5 +44,9 @@ const agentAliasId = "UOATZ4IVSA";
 const sessionId = "12311231";
 const inputText = "Generate a message to advertise a promotion";
 
-invokeAgent(agentId, agentAliasId, sessionId, inputText);
+const responseText = invokeAgent(agentId, agentAliasId, sessionId, inputText);
 };
+
+return {
+ name:responseText;
+}

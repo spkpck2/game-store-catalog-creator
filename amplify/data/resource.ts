@@ -19,10 +19,7 @@ const schema = a.schema({
     })
     .returns(
       a.customType({
-        name: a.string().required(),
-        description: a.string().required(),
-        rating: a.float().required(),
-        price: a.float().required(),
+        name: a.string().required()
       })
     )
     .handler(a.handler.function(generateGameListing))
