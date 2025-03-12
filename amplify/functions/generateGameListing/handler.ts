@@ -48,5 +48,5 @@ const responseText = invokeAgent(agentId, agentAliasId, sessionId, inputText);
 };
 
 return {
- name:responseText;
+ name:responseText,
 }
