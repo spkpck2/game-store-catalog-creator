@@ -27,9 +27,6 @@ export function AddGame() {
     });
 
     setName(listing?.name || "");
-    setDescription(listing?.description || "");
-    setRating(listing?.rating || 0);
-    setPrice(listing?.price || 0);
     setPrompt("");
     await generateImages();
     setLoading(false);
