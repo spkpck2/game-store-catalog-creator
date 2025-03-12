@@ -22,7 +22,7 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 	inputText: "Generate a message to advertise a promotion",
   });
 		const response = await client.send(command);
-		const responseText = "";
+		let responseText = "";
 		if(response.completion) {
 			for await (const event of response.completion) {
 				if (event.chunk) {
