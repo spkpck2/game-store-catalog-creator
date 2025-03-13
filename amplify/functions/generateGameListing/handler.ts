@@ -15,8 +15,8 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 ) => {
   const client = new BedrockAgentRuntimeClient({ region: "us-west-2" }); 
 	const command = new InvokeAgentCommand({
-	agentId: "ILVUMV8CBH",
-	agentAliasId: "UOATZ4IVSA",
+	agentId: "FV9PUVGZPT",
+	agentAliasId: "1OHDDN5FHX",
 	sessionId: "12311231",
 	enableTrace: false,
 	inputText: event.arguments.prompt,
