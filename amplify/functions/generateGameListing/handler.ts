@@ -19,7 +19,7 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 	agentAliasId: "UOATZ4IVSA",
 	sessionId: "12311231",
 	enableTrace: false,
-	inputText: event.arguments.description,
+	inputText: event.arguments.prompt,
   });
 		const response = await client.send(command);
 		let responseText = "";
