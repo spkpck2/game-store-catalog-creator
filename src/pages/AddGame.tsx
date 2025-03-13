@@ -78,6 +78,20 @@ export function AddGame() {
     <div>
       <h1 className="text-4xl text-orange-500">Add Game</h1>
       <div className="flex  gap-8">
+        <GameInformation
+          createGame={createGame}
+          description={description}
+          image={image}
+          loading={loading}
+          name={name}
+          price={price}
+          rating={rating}
+          setDescription={setDescription}
+          setImage={setImage}
+          setName={setName}
+          setPrice={setPrice}
+          setRating={setRating}
+        />
         <GamePrompt
           generateGameListing={generateGameListing}
           loading={loading}
