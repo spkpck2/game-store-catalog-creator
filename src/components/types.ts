@@ -19,4 +19,6 @@ export interface GamePromptProps {
   generatedImages: string[];
   setPrompt: (prompt: string) => void;
   prompt: string;
+  response: string;
+  setResponse: (response: string) => void;
 }

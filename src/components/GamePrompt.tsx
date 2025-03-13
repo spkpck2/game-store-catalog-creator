@@ -6,12 +6,13 @@ export function GamePrompt({
   generatedImages,
   setPrompt,
   prompt,
+  response
 }: GamePromptProps) {
   return (
     <section className="flex flex-col w-full">
       <form
         onSubmit={generateGameListing}
-        className="nes-container is-rounded flex flex-col gap-4  h-1/2   items-start "
+        className="nes-container is-rounded flex flex-col gap-4   items-start "
       >
         <p>Enter what type of game you'd like, be specific:</p>
         <label id="prompt-label">Prompt</label>
@@ -34,7 +35,14 @@ export function GamePrompt({
         >
           Generate Game
         </button>
-      </form>
+
+      <div className="nes-field">
+        <label id="response-label">Response</label>
+        <p>{response}</p>
+      </div>  
+
+
+	</form>
       {generatedImages.length > 0 ? (
         <section className="nes-container with-title flex flex-col gap-4 my-4">
           <h3 className="title">Pictures to choose from...</h3>

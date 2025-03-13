@@ -12,6 +12,7 @@ export function AddGame() {
   const [description, setDescription] = React.useState("");
   const [rating, setRating] = React.useState(0);
   const [price, setPrice] = React.useState(0);
+  const [response, setResponse] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const [image, setImage] = React.useState("");
   const [generatedImages, setGeneratedImages] = React.useState<string[]>([]);
@@ -28,6 +29,7 @@ export function AddGame() {
 
     setName(listing?.name || "");
     setPrompt("");
+    setResponse(listing?.name || "");
     await generateImages();
     setLoading(false);
   }
@@ -97,6 +99,8 @@ export function AddGame() {
           generatedImages={generatedImages}
           prompt={prompt}
           setPrompt={setPrompt}
+	  response={response}
+	  setResponse={setResponse}
         />
       </div>
     </div>
