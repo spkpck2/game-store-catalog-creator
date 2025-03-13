@@ -76,8 +76,8 @@ export function AddGame() {
 
   return (
     <div>
-      <h1 className="text-4xl text-orange-500">Add Game</h1>
-      <div className="flex  gap-8">
+      <h1 className="text-4xl text-orange-500">QuizMeBtPromo</h1>
+      <div style={{display:'none'}}>
         <GameInformation
           createGame={createGame}
           description={description}
@@ -92,6 +92,8 @@ export function AddGame() {
           setPrice={setPrice}
           setRating={setRating}
         />
+     </div>
+     <div className="flex gap-8">     
         <GamePrompt
           generateGameListing={generateGameListing}
           loading={loading}
