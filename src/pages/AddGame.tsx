@@ -24,12 +24,11 @@ export function AddGame() {
     if (!prompt) return;
     setLoading(true);
     const { data: listing } = await client.queries.generateGameListing({
-      description: prompt,
+      prompt: prompt,
     });
 
-    setName(listing?.name || "");
     setPrompt("");
-    setResponse(listing?.name || "");
+    setResponse(listing?.response || "");
     await generateImages();
     setLoading(false);
   }

@@ -15,11 +15,11 @@ const schema = a.schema({
   generateGameListing: a
     .query()
     .arguments({
-      description: a.string().required(),
+      prompt: a.string().required(),
     })
     .returns(
       a.customType({
-        name: a.string().required()
+        response: a.string().required()
       })
     )
     .handler(a.handler.function(generateGameListing))

@@ -19,7 +19,7 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 	agentAliasId: "UOATZ4IVSA",
 	sessionId: "12311231",
 	enableTrace: false,
-	inputText: "Generate a message to advertise a promotion",
+	inputText: event.arguments.description,
   });
 		const response = await client.send(command);
 		let responseText = "";
@@ -33,6 +33,6 @@ export const handler: Schema["generateGameListing"]["functionHandler"] = async (
 		}
 
 return {
- name:responseText,
+ response:responseText,
 };
 };
