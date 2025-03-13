@@ -14,7 +14,7 @@ export function GamePrompt({
         onSubmit={generateGameListing}
         className="nes-container is-rounded flex flex-col gap-4   items-start "
       >
-        <p>Enter what type of game you'd like, be specific:</p>
+        <p>Promotions is a complicated space huh, NOT FOR ME!!! :</p>
         <label id="prompt-label">Prompt</label>
         <input
           disabled={loading}
@@ -33,7 +33,7 @@ export function GamePrompt({
             loading && "cursor-not-allowed !bg-gray-100"
           }`}
         >
-          Generate Game
+          Help Me!!
         </button>
 
       <div className="nes-field">
