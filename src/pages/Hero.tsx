@@ -27,7 +27,7 @@ export function Hero() {
           type="button"
           className="nes-btn is-primary"
         >
-          Add Game
+          Try QuizMeBtPromo
         </button>
       </div>
 

@@ -23,7 +23,7 @@ export function GamePrompt({
           onChange={(e) => setPrompt(e.target.value)}
           className="nes-input"
           id="prompt-label"
-          placeholder="What type of game would you like?"
+          placeholder="How can I help?"
         />
         <button
           id="submit"
