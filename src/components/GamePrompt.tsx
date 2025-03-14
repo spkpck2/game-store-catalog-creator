@@ -14,7 +14,7 @@ export function GamePrompt({
         onSubmit={generateGameListing}
         className="nes-container is-rounded flex flex-col gap-4   items-start "
       >
-        <p>Promotions is a complicated space huh, NOT FOR ME!!! :</p>
+        <p>Promotions are complicated  huh? NOT FOR ME!!!  </p>
         <label id="prompt-label">Prompt</label>
         <input
           disabled={loading}
