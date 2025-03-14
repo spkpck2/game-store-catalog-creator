@@ -76,7 +76,7 @@ export function AddGame() {
 
   return (
     <div>
-      <h1 className="text-4xl text-orange-500">QuizMeBtPromo</h1>
+      <h1 className="text-4xl text-orange-500">Prometheus</h1>
       <div style={{display:'none'}}>
         <GameInformation
           createGame={createGame}
